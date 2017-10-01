@@ -20,13 +20,13 @@
 		
 		<div class="flex-container">
 		
-		<div class="mainHeaders flex-item">
+		<div class="mainHeaders">
 			<h1>Computer 101</h1>
 			<p>Technology explained</p>
 
 			<div class="newsletter">
 				<p>If you would like to find out more about the interesting world of computers make sure to subscribe to our newsletter!</p>
-				<button id="sign-up">Sign up</button>
+				<button id="signUp">Sign up</button>
 			</div>
 		</div>
 
@@ -34,7 +34,7 @@
 
 
 		<!-- descriptive cards-->
-		<div class="cardsContainer flex-item">
+		<div class="cardsContainer">
 
 			<div class="card">
 				<img src="images/newtonC.jpg" alt="">
@@ -54,28 +54,22 @@
 		
 		
 		<!-- newsletter pop-up for subscription-->
-		<div id="dialog-form" title="Sign up for newsletter">
-		<p class="validateTips">By signing up for this newsletter you can get more information about computers</p>
-		
-		
+		<div id="dialogForm" title="Sign up for newsletter">
+		<p class="tips">By signing up for this newsletter you can get more information about computers</p>
+		<p class="formErrors"></p>
 		<form>
 			<fieldset>
 				<div>
 					<label for="gender">Gender</label><br />
 					<input type="radio" name="gender" id="gender" value="male" class="text ui-widget-content ui-corner-all"> male
-				
 					<input type="radio" name="gender" id="gender" value="female" class="text ui-widget-content ui-corner-all"> female
-
-
 					<input type="radio" name="gender" id="gender" value="other" class="text ui-widget-content ui-corner-all"> other
-
-
 				</div>
 				<div>
-					<input type="text" name="first-name" id="first-name" value="" placeholder="First name" class="text ui-widget-content ui-corner-all">
+					<input type="text" name="first-name" id="firstName" value="" placeholder="First name" class="text ui-widget-content ui-corner-all">
 				</div>
 				<div>
-					<input type="text" name="last-name" id="last-name" value=""  placeholder="Last name" class="text ui-widget-content ui-corner-all">
+					<input type="text" name="last-name" id="lastName" value=""  placeholder="Last name" class="text ui-widget-content ui-corner-all">
 				</div>
 				<div>
 					<input type="email" name="email" id="email" value=""  placeholder="your@email.com" class="text ui-widget-content ui-corner-all">
@@ -84,9 +78,11 @@
 					<input type="date" name="birthdate" id="birthdate" value="" placeholder="Date of birth" class="text ui-widget-content ui-corner-all">
 				</div>
 			</fieldset>
+			<div>
+				<input type="submit" value="Sign up" class="formSignUp" />
+			</div>
 		</form>
-		
-		</div><!--end of #dialog-form-->
+	</div><!--end of #dialog-form-->
 	</div><!--end of .flex-container -->
 
 		<!-- footer-->

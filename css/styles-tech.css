@@ -76,13 +76,52 @@ nav ul li a:hover, nav ul li a:active{
 }
 
 .mainHeaders .newsletter p{
-	padding-top: 3rem;
+	padding: 3rem 0 2rem 0;
 	width: 100%;
 	font-size: 1rem;
 	letter-spacing: 0;
+	line-height: 1.4rem;
 	text-align: justify;
 }
+/*styling for the cards*/
 
+.cardsContainer {
+	width: 35%;
+	padding-top: 10rem;
+	margin-bottom: 2rem;
+	margin-left: 5rem;
+}
+
+.cardsContainer .card{
+	width: 80%;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 3%;
+	margin: 0 auto;
+
+}
+
+.cardsContainer .card:nth-of-type(2){
+	width:90%;
+	margin: -70% auto 0 auto;
+}
+
+.cardsContainer .card:nth-of-type(3){
+	width:100%;
+	margin: -70% auto 0 auto;
+}
+
+.cardsContainer .card img{
+	width: 100%;
+}
+
+.cardsContainer .card p {
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0.8rem;
+	padding-bottom: 1.5rem;
+}
+
+/*styling for the dialog box*/
 /*styling for the dialog box*/
 .ui-dialog {
 	background-color: white;
@@ -100,65 +139,79 @@ nav ul li a:hover, nav ul li a:active{
 	box-sizing: border-box;
 }
 
-#dialog-form {
+#dialogForm {
 	padding: 1rem;
 	box-sizing: border-box;
 }
 
-#dialog-form form div, #dialog-form form div input {
+#dialogForm form div, #dialogForm form div input {
 	padding: 0.5rem;
 	min-width: 100%;
 	box-sizing: border-box;
 }
 
-#dialog-form form input[type="date"]:before {
+#dialogForm form input[type="date"]:before {
     content: attr(placeholder) !important;
     color: #aaa;
     margin-right: 0.5em;
 }
 
-#dialog-form form input[type="date"]:focus:before,
-#dialog-form form input[type="date"]:valid:before {
+#dialogForm form input[type="date"]:focus:before,
+#dialogForm form input[type="date"]:valid:before {
 	content: "";
 }
 
-
-/*styling for the cards*/
-
-.cardsContainer {
-	width: 35vw;
-	padding-right: 5rem;
-	padding-top: 10rem;
-	margin-bottom: 2rem;
+#dialogForm .tips {
+	margin: 10px 0;
 }
 
-.cardsContainer .card{
-	width: 80%;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-	border-radius: 3%;
-	margin: 0 auto;
-
+#dialogForm .formErrors {
+	color: red;
+	margin: 10px 0;
 }
 
-.cardsContainer .card:nth-of-type(2){
-	width:90%;
-	margin: -17rem auto 0 auto;
+.ui-dialog  {
+	z-index: 10;
 }
 
-.cardsContainer .card:nth-of-type(3){
-	width:100%;
-	margin: -17rem auto 0 auto;
+.ui-state-error {
+	border-color: red;
 }
 
-.cardsContainer .card img{
-	width: 100%;
+.ui-state-success {
+	border-color: green;
 }
 
-.cardsContainer .card p {
-	text-transform: uppercase;
-	text-align: center;
-	margin: 0.8rem;
-	padding-bottom: 1.5rem;
+.ui-dialog-titlebar-close {
+	float: right;
+}
+
+.ui-widget-overlay {
+	position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#signUp {
+	color: #22acdd;
+	padding: 0.5rem 2rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 15px;
+	box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+}
+
+#signUp:hover{
+	color: white;
+	background-color: #22acdd;
 }
 
 /*styling for the footer*/
@@ -282,15 +335,44 @@ footer{
 /* styling for mobile view */
 
 @media screen and (max-width: 560px) {
-	/*styling for the motherboard page*/
-
-	.wrapperMb {
+	/*styling for the homepage*/
+	
+	nav {
 		width: 100vw;
 	}
-
-	.mbDesc{
-		width: 90%;
+	
+	nav ul li {
+		display: block;
+	}
+	
+	.flex-container{
+		flex-direction: column;
 	}
 
+	.mainHeaders {
+		width: 90vw;
+		margin: 3rem auto 0 auto;
+	}
+	
+	.cardsContainer {
+		width: 80vw;
+		margin: 0 auto 2rem auto;
+		padding-top: 3rem;
+	}
+	
+	.cardsContainer .card:nth-of-type(1){
+		width: 60%;
+		
+	}
+	
+	.cardsContainer .card:nth-of-type(2){
+		margin: -60% auto 0 auto;
+		width: 70%;
+	}
+
+	.cardsContainer .card:nth-of-type(3){
+		margin: -60% auto 0 auto;
+		width: 80%;
+	}
 
 }
