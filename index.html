@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/css-reset.css" rel="stylesheet">
+<link href="css/styles-tech.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapperHp">
+		<header>
+			<!-- start of navigation-->
+			<nav>
+				<ul>
+					<li><a href="motherboard.html">Motherboard</a></li>
+					<li><a href="index.html"><img src="images/stats.png" alt=""></a></li>
+					<li><a href="peripherals.html">Peripherals</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div class="flex-container">
+		
+		<div class="mainHeaders flex-item">
+			<h1>Computer 101</h1>
+			<p>Technology explained</p>
+
+			<div class="newsletter">
+				<p>If you would like to find out more about the interesting world of computers make sure to subscribe to our newsletter!</p>
+				<button id="sign-up">Sign up</button>
+			</div>
+		</div>
+
+
+
+
+		<!-- descriptive cards-->
+		<div class="cardsContainer flex-item">
+
+			<div class="card">
+				<img src="images/newtonC.jpg" alt="">
+				<p>Modern Inventions</p>
+			</div>
+
+			<div class="card">
+				<img src="images/modernBuilding.jpg" alt="">
+				<p>Modern Designs</p>
+			</div>
+
+			<div class="card">
+				<img src="images/modernTech.jpg" alt="">
+				<p>Modern Technology</p>
+			</div>
+		</div>
+		
+		
+		<!-- newsletter pop-up for subscription-->
+		<div id="dialog-form" title="Sign up for newsletter">
+		<p class="validateTips">By signing up for this newsletter you can get more information about computers</p>
+		
+		
+		<form>
+			<fieldset>
+				<div>
+					<label for="gender">Gender</label><br />
+					<input type="radio" name="gender" id="gender" value="male" class="text ui-widget-content ui-corner-all"> male
+				
+					<input type="radio" name="gender" id="gender" value="female" class="text ui-widget-content ui-corner-all"> female
+
+
+					<input type="radio" name="gender" id="gender" value="other" class="text ui-widget-content ui-corner-all"> other
+
+
+				</div>
+				<div>
+					<input type="text" name="first-name" id="first-name" value="" placeholder="First name" class="text ui-widget-content ui-corner-all">
+				</div>
+				<div>
+					<input type="text" name="last-name" id="last-name" value=""  placeholder="Last name" class="text ui-widget-content ui-corner-all">
+				</div>
+				<div>
+					<input type="email" name="email" id="email" value=""  placeholder="your@email.com" class="text ui-widget-content ui-corner-all">
+				</div>
+				<div>
+					<input type="date" name="birthdate" id="birthdate" value="" placeholder="Date of birth" class="text ui-widget-content ui-corner-all">
+				</div>
+			</fieldset>
+		</form>
+		
+		</div><!--end of #dialog-form-->
+	</div><!--end of .flex-container -->
+
+		<!-- footer-->
+		<footer>
+			<p>&copy; Elena 2017.<p>
+		</footer>
+	</div>
+
+
+
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="js/jsHp.js"></script>
+
+</body>
+</html>
