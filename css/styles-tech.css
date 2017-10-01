@@ -51,6 +51,8 @@ nav ul li a:hover, nav ul li a:active{
 	color: #22acdd;
 }
 
+/*styling for the introduction paragraphs*/
+
 .flex-container{
 	display: flex;
 }
@@ -121,7 +123,6 @@ nav ul li a:hover, nav ul li a:active{
 	padding-bottom: 1.5rem;
 }
 
-/*styling for the dialog box*/
 /*styling for the dialog box*/
 .ui-dialog {
 	background-color: white;
@@ -199,7 +200,8 @@ nav ul li a:hover, nav ul li a:active{
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#signUp {
+/* styling for the sign up button*/
+#signUp, #signUpp {
 	color: #22acdd;
 	padding: 0.5rem 2rem;
 	background-color: rgba(255, 255, 255, 0.1);
@@ -209,7 +211,7 @@ nav ul li a:hover, nav ul li a:active{
 	cursor: pointer;
 }
 
-#signUp:hover{
+#signUp:hover, #signUpp:hover{
 	color: white;
 	background-color: #22acdd;
 }
@@ -229,42 +231,39 @@ footer{
 
 
 /*styling for the motherboard page*/
+/*styling for descrption paragraphs and header*/
 
 .wrapperMb {
-	width: 80vw;
+	width: 100vw;
 	margin: 0 auto;
 	overflow: hidden;
+	background-image: url('../images/motherboardBg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 
 .mbDesc{
-	float: left;
-	height: 40vh;
-	padding: 5rem 0 0 4rem;
-	background-image: url('../images/motherboardBg.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+	padding: 5rem 0 0 0;
 	overflow: hidden;
+	display: flex;
+	min-height: 40vh;
 }
 
 .mbDesc .pss{
-	width: 30%;
-	float: left;
+	width: 40%;
 }
 
 .mbDesc .pss p{
-	padding: 0 0 2rem 0;
+	padding: 0 1rem 1rem 1rem;
 	line-height: 1.4rem;
 	font-weight: 100;
 }
 
 .mbDesc .subHeaders {
-	float: left;
 	width: 20%;
 	margin: 5rem;
-	/*position: absolute;
-	top: 60vh;
-	left: 50vw;*/
+	color: black;
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	letter-spacing: 0.03rem;
@@ -273,23 +272,25 @@ footer{
 
 }
 
+/*styling for the motherboard image and the descriptive accordion list*/
+
 .theMotherboard{
-	clear: both;
-	overflow: hidden;
+	display: flex;
 	background-color: #ececec;
 	padding-top: 5rem;
 }
 
+.theMotherboard div{
+	width: 50%;
+	margin: 0 2rem;
+	
+}
 
-.theMotherboard img{
-	width: 40%;
-	float: left;
-	margin-left: 5rem;
-	padding-bottom: 5rem;
+.theMotherboard div img{
+	width: 100%;
 }
 
 .listing {
-	float: right;
 	width: 45%;
 	margin-top: 3rem;
 }
@@ -308,27 +309,32 @@ footer{
 
 /*styling for the peripherals page*/
 
-.peri {
-	text-align: center;
-	padding-top: 2rem;
-}
-
 .peri h1{
 	width: 60%;
-	margin: -5rem auto 0 auto;
+	margin: -10rem auto 0 auto;
 	font-size: 1.5rem;
-	padding: 0.2rem;
+	padding: 0 0 2rem 0;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 .peri h1 span{
 	font-style: italic;
 	padding: 0.2rem;
-	line-height: 4rem;
 	color: #22acdd;
 }
+
+.peri p{
+	padding: 0 2rem 1rem;
+	text-indent: 1rem;
+}
+
+.peri ul{
+	padding: 0 0 1rem 3rem;
+	line-height: 1.4rem;
+}
 #gallery {
-	width: 70%;
+	width: 50%;
 	margin: 3rem auto 0 auto;
 }
 
@@ -374,5 +380,88 @@ footer{
 		margin: -60% auto 0 auto;
 		width: 80%;
 	}
+	
+	/*styling for motherboard page*/
+	
+	.mbDesc {
+		flex-direction: column;
+		min-height: 10vh;
+	}
+	
+	.mbDesc .pss{
+		width: 90%;
+		margin: 0 auto;
+	}
 
+	.mbDesc .subHeaders {
+		width: 100%;
+		margin: 1rem auto;
+		text-align: center;
+	}
+	
+	.theMotherboard{
+		flex-direction: column;
+	}
+	
+	.theMotherboard{
+		flex-direction: column;
+		padding-top: 2rem;
+	}
+
+	.theMotherboard div{
+		width: 70%;
+		margin: 0 auto;
+	
+	}
+
+	.listing {
+		width: 45%;
+		padding-top: 3rem;
+	}
+}
+
+/*styling for tablet*/
+
+@media screen and (max-width: 780px) and (min-width: 561px) {
+	/*styling for the homepage*/
+	
+	nav {
+		width: 100vw;
+	}
+	
+	.mainHeaders{
+		margin-left: 1rem;
+	}
+	
+	.mainHeaders h1{
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	
+	.mainHeaders p{
+		font-size: 1rem;
+	}
+	
+	.cardsContainer {
+		width: 40vw;
+		margin-left: 2rem;
+	}
+	
+	.cardsContainer .card:nth-of-type(1){
+		width: 65%;
+		
+	}
+	
+	.cardsContainer .card:nth-of-type(2){
+		margin: -60% auto 0 auto;
+		width: 70%;
+	}
+
+	.cardsContainer .card:nth-of-type(3){
+		margin: -60% auto 0 auto;
+		width: 80%;
+	}
+	
+	
+	
 }

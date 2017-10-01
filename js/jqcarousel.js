@@ -28,7 +28,7 @@
 
     options: {
       eccentricity: 0.99,
-      focus: 400,
+      focus: 250,
       animationDuration: 700,
       opacity: true,
       resize: true,
@@ -36,9 +36,9 @@
       minOpacity: 0.2,
       minSizeRatio: 0.8,
       keyboardNavigation: true,
-      imageWidth: 300,
+      imageWidth: 200,
       direction: 'shortest',
-      enlargeWidth: 500,
+      enlargeWidth: 300,
       enlargeDuration: 200,
       closeDuration: 250,
       closeButtonSize: 30,
@@ -149,7 +149,7 @@
         stepDuration: 25,
         sizeBackup: [],
         enlarged: false,
-        maxHeight: 0,
+        maxHeight: 500,
         enlargedItems: null
       };
     },
@@ -192,7 +192,7 @@
         i = images.length,
         width,
         height,
-        maxHeight = 0;
+        maxHeight = 400;
       while (i) {
         i -= 1;
         width = images[i].image.width();
